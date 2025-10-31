@@ -26,13 +26,13 @@ const ValuesSection = () => {
   return (
     <section
       id="values"
-      className="relative bg-gradient-to-br from-[#F5FAFF] via-white to-[#E6F2FA] py-28 text-[#333] overflow-hidden"
+      className="relative bg-gradient-to-br from-[#F5FAFF] via-white to-[#E6F2FA] py-15 md:py-20 text-[#333] overflow-hidden"
     >
       {/* ===== Decorative Background Shapes ===== */}
       <div className="absolute top-0 left-0 w-48 h-48 bg-[#00A3E8]/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#003E6B]/10 rounded-full blur-3xl animate-pulse"></div>
 
-      <div className="relative container mx-auto px-6 text-center">
+      <div className="relative container mx-auto px-3 md:px-6 text-center">
         {/* ===== Section Heading ===== */}
         <h2
           data-aos="fade-up"
@@ -59,7 +59,7 @@ const ValuesSection = () => {
               key={index}
               data-aos="zoom-in"
               data-aos-delay={val.delay}
-              className="relative bg-white/90 backdrop-blur-md p-10 rounded-3xl shadow-lg hover:shadow-[0_10px_40px_rgba(0,163,232,0.25)] transition-all duration-500 hover:-translate-y-2"
+              className="relative bg-white/90 backdrop-blur-md p-5 md:p-10 rounded-3xl shadow-lg hover:shadow-[0_10px_40px_rgba(0,163,232,0.25)] transition-all duration-500 hover:-translate-y-2"
             >
               <div className="flex justify-center mb-6">
                 <div className="p-6 bg-[#00A3E8]/10 rounded-full shadow-md">
@@ -83,7 +83,7 @@ const ValuesSection = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="800"
-          className="mt-16 flex justify-center"
+          className="mt-10 md:mt-16 flex justify-center"
         >
           <button className="px-8 py-3 bg-[#00A3E8] text-white font-semibold rounded-full shadow-lg hover:bg-[#0090D0] hover:shadow-2xl transition-all duration-300">
             Learn More
