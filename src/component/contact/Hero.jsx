@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
-  const fadeIn = (delay = 0) => ({
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, delay },
-    },
-  });
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 bg-linear-to-b from-[#468DE0] via-[#468DE1] to-[#2b6cb0] overflow-hidden">
@@ -24,34 +26,31 @@ const Hero = () => {
       />
 
       {/* 🔹 Hero Heading */}
-      <motion.h1
-        variants={fadeIn(0.1)}
-        initial="hidden"
-        animate="visible"
-        className="text-5xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-md"
-      >
-        Let’s <span className="text-[#ffde59]">Connect</span> & Build
-        <br className="hidden sm:block" />
-        Something <span className="text-[#ffffff]">Extraordinary</span>
-      </motion.h1>
+      <h1 className="text-5xl md:text-6xl pt-20 font-extrabold text-white leading-tight drop-shadow-md space-y-3">
+        <div data-aos="fade-left" data-aos-delay="100">
+          Let’s <span className="text-[#ffde59]">Connect</span>
+        </div>
+        <div data-aos="fade-right" data-aos-delay="400">
+          & Build Something{" "}
+          <span className="text-[#ffffff]">Extraordinary</span>
+        </div>
+      </h1>
 
       {/* 🔹 Subtitle */}
-      <motion.p
-        variants={fadeIn(0.3)}
-        initial="hidden"
-        animate="visible"
+      <p
+        data-aos="fade-up"
+        data-aos-delay="600"
         className="text-gray-100 mt-5 max-w-2xl text-lg leading-relaxed"
       >
         I’m always open to discussing new projects, creative ideas, or
         opportunities to be part of your vision. Let’s make your ideas a
         reality together!
-      </motion.p>
+      </p>
 
       {/* 🔹 Call to Action */}
-      <motion.div
-        variants={fadeIn(0.5)}
-        initial="hidden"
-        animate="visible"
+      <div
+        data-aos="zoom-in"
+        data-aos-delay="800"
         className="mt-8"
       >
         <a
@@ -60,7 +59,7 @@ const Hero = () => {
         >
           Contact Me <ArrowRight size={20} />
         </a>
-      </motion.div>
+      </div>
     </section>
   );
 };
