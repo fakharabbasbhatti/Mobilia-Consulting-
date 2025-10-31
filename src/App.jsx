@@ -20,7 +20,7 @@ import Contact from "./pages/Contact";
 // ✅ Layout component (Navbar + Footer always visible)
 const Layout = () => {
   return (
-    <div className="p-6 flex flex-col">
+    <div className="flex flex-col">
       <Navbar />
       <main className="flex-grow">
         <Outlet />
