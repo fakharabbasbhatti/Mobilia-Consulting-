@@ -28,7 +28,7 @@ const Hero = () => {
       {/* 🔹 Hero Heading */}
       <h1 className="text-5xl md:text-6xl pt-20 font-extrabold text-white leading-tight drop-shadow-md space-y-3">
         <div data-aos="fade-left" data-aos-delay="100">
-          Let’s <span className="text-[#ffde59]">Connect</span>
+          Let’s <span className="text-[#00B29C]">Connect</span>
         </div>
         <div data-aos="fade-right" data-aos-delay="400">
           & Build Something{" "}
@@ -55,7 +55,7 @@ const Hero = () => {
       >
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-linear-to-r from-[#ffde59] to-[#facc15] text-[#1a202c] font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-[0_0_25px_rgba(255,222,89,0.5)] transition-all duration-300"
+          className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-linear-to-r from-[#00B29C] to-[#027c6e] text-[white] font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-[0_0_25px_rgba(255,222,89,0.5)] transition-all duration-300"
         >
           Contact Me <ArrowRight size={20} />
         </a>

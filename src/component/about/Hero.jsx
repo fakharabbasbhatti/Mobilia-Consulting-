@@ -3,7 +3,7 @@ import { FaBuilding } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center text-center h-[90vh] overflow-hidden bg-[#003E6B]">
+    <section className="relative flex items-center justify-center text-center h-[90vh] overflow-hidden bg-[#00BFA6]">
       {/* ===== Background Image Layer ===== */}
       <div
         className="hidden md:flex absolute inset-0 bg-cover bg-center"
@@ -15,7 +15,7 @@ const Hero = () => {
 
       {/* ===== Overlay Gradient with Taller Clip Path ===== */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-[#003E6B]/95 via-[#005FA3]/90 to-[#003E6B]/95"
+        className="absolute inset-0 bg-gradient-to-b from-[#00BFA6]/50 via-[#00BFA6]/50 to-[#00BFA6]/50"
         style={{
           clipPath:
             "polygon(0 0, 100% 0, 100% 75%, 0 100%)", // Raised curve height
@@ -23,7 +23,7 @@ const Hero = () => {
       ></div>
 
       {/* ===== Content ===== */}
-      <div className="relative z-10 container mx-auto px-3 md:px-6 flex flex-col items-center justify-center text-white">
+      <div className="relative z-10 container mx-auto px-3 md:px-6 flex flex-col items-center justify-center text-[white]">
 
         {/* Main heading */}
         <h1
@@ -57,7 +57,7 @@ const Hero = () => {
           data-aos-delay="800"
           className="mt-10 md:mt-20 relative z-20"
         >
-          <button className="px-8 py-3 bg-[#00A3E8] hover:bg-[#0090D0] transition-all duration-300 text-white font-semibold rounded-full shadow-md hover:shadow-2xl">
+          <button className="px-8 py-3 bg-[#00BFA6] hover:bg-[#0090D0] transition-all duration-300 text-white font-semibold rounded-full shadow-md hover:shadow-2xl">
             Learn More
           </button>
         </div>

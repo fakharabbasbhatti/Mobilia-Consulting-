@@ -45,7 +45,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative w-full h-screen overflow-hidden text-white" aria-label="Hero Section">
+    <section className="relative w-full h-screen pt-5 overflow-hidden text-white" aria-label="Hero Section">
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         effect="fade"

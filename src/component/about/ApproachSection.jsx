@@ -91,7 +91,7 @@ const ApproachSection = () => {
         <div className="mt-16" data-aos="fade-up" data-aos-delay="800">
             <button
                 // Button styling: large, rounded, shadowed, and animated on hover
-                className="inline-flex items-center justify-center px-10 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-[#00A3E8] hover:bg-[#0090D0] focus:outline-none  transition duration-300 transform hover:translate-y-[-3px] active:scale-95"
+                className="inline-flex items-center justify-center px-5 py-2 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-[#00BFA6] hover:bg-[#002B5B] focus:outline-none  transition duration-300 transform hover:translate-y-[-3px] active:scale-95"
             >
                 Start Your Savings
             </button>

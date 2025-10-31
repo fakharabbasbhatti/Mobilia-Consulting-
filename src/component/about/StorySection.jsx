@@ -22,7 +22,7 @@ const StorySection = () => {
             <p
               data-aos="fade-right"
               data-aos-duration="600"
-              className="text-lg font-semibold uppercase tracking-widest text-[#007BFF] mb-3"
+              className="text-lg font-semibold uppercase tracking-widest text-[#002B5B] mb-3"
             >
               Our Foundation
             </p>
@@ -32,9 +32,9 @@ const StorySection = () => {
               data-aos="fade-right"
               data-aos-duration="800"
               data-aos-delay="100"
-              className="text-4xl md:text-6xl font-extrabold text-[#0A3D62] mb-8 leading-tight"
+              className="text-4xl md:text-6xl font-extrabold text-[#002B5B] mb-8 leading-tight"
             >
-              Driving <span className="text-[#007BFF]">Excellence</span>, Building Trust.
+              Driving <span className="text-[#00BFA6]">Excellence</span>, Building Trust.
             </h2>
 
             {/* 📝 Paragraph 1 (Clear and detailed) */}
@@ -63,7 +63,7 @@ const StorySection = () => {
               data-aos-duration="700"
               data-aos-delay="700"
             >
-              <button className="flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-[#007BFF] rounded-full shadow-lg shadow-[#007BFF]/50 hover:bg-[#0A3D62] transform hover:scale-[1.03] transition duration-300 ease-in-out group">
+              <button className="flex items-center justify-center px-5 py-2 text-lg font-semibold text-white bg-[#00BFA6] rounded-full shadow-lg shadow-[#007BFF]/50 hover:bg-[#0A3D62] transform hover:scale-[1.03] transition duration-300 ease-in-out group">
                 Discover Our Impact
                 <FaArrowRight className="ml-3 group-hover:translate-x-1 transition duration-300" />
               </button>

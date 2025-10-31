@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ServicesList = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true, easing: "ease-in-out" });
+  }, []);
+
   const services = [
     {
       title: "Wireless & Mobility",
@@ -51,35 +57,50 @@ const ServicesList = () => {
 
   return (
     <section className="py-20 px-6 bg-gray-50">
+      {/* Header */}
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0e579c]">
+        <h2
+          data-aos="fade-down"
+          className="text-3xl md:text-4xl font-bold mb-4 text-[#0e579c]"
+        >
           Areas We Optimize
         </h2>
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="text-lg text-gray-700 max-w-3xl mx-auto"
+        >
           Mobilia Consulting helps organizations reduce operational costs by
           identifying inefficiencies across vendor contracts — without changing
           your existing providers or disrupting daily operations.
         </p>
       </div>
 
+      {/* Services Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition"
+            data-aos="fade-up"
+            data-aos-delay={index * 150}
+            className="relative h-80 rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 hover:shadow-2xl hover:scale-105 group cursor-pointer"
             style={{
               backgroundImage: `url(${service.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            {/* Gradient Overlay: Bottom blue to top white */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#468de0]/90  to-white/10"></div>
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#468DE0]/90 to-white/10 pointer-events-none transition-all duration-500 group-hover:from-[#00BFA6]/70 group-hover:to-white/10"></div>
 
-            {/* Text content */}
-            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
-              <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-              <p className="text-sm">{service.desc}</p>
+            {/* Text Content */}
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10 transition-all duration-500 group-hover:translate-y-[-5px]">
+              <h3 className="text-2xl font-bold mb-2 group-hover:text-[#002B5B] transition-colors duration-500">
+                {service.title}
+              </h3>
+              <p className="text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-500">
+                {service.desc}
+              </p>
             </div>
           </div>
         ))}

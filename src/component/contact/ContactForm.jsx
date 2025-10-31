@@ -25,7 +25,7 @@ const ContactForm = () => {
         className="text-center mb-12 z-10"
       >
         <h2 className="text-4xl md:text-5xl font-extrabold text-white">
-          Let’s <span className="text-[#ffde59]">Talk</span> About Your{" "}
+          Let’s <span className="text-[#00B29C]">Talk</span> About Your{" "}
           <span className="text-white">Next Project</span>
         </h2>
         <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
@@ -59,7 +59,7 @@ const ContactForm = () => {
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 200}
-              className="flex items-center gap-4 bg-[#10234D]/60 border border-[#ffffff22] shadow-[0_0_20px_rgba(70,141,224,0.2)] rounded-2xl p-5 hover:shadow-[0_0_25px_rgba(70,141,224,0.6)] transition-all duration-300 backdrop-blur-sm"
+              className="flex items-center gap-4 bg-[#00B29C]/60 border border-[#ffffff22] shadow-[0_0_20px_rgba(70,141,224,0.2)] rounded-2xl p-5 hover:shadow-[0_0_25px_rgba(70,141,224,0.6)] transition-all duration-300 backdrop-blur-sm"
             >
               <div className="p-3 bg-linear-to-r from-[#468DE0] to-[#61A5F9] rounded-full text-white shadow-lg">
                 {item.icon}
@@ -96,7 +96,7 @@ const ContactForm = () => {
         <form
           data-aos="fade-left"
           onSubmit={(e) => e.preventDefault()}
-          className="flex-1 bg-[#10234D]/60 border border-[#ffffff22] rounded-3xl shadow-lg p-8 md:p-10 backdrop-blur-md"
+          className="flex-1 bg-[#00B29C]/60 border border-[#ffffff22] rounded-3xl shadow-lg p-8 md:p-10 backdrop-blur-md"
         >
           <h3 className="text-2xl font-bold text-white mb-6">
             Send Me a Message
