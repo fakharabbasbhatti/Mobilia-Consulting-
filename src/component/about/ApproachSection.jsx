@@ -31,7 +31,7 @@ const ApproachSection = () => {
 
   return (
     // Outer section with light background and responsive padding
-    <section className="bg-gray-50 py-16 sm:py-20 text-gray-800 font-sans" data-aos="fade-up">
+    <section className="bg-gray-50 py-10 sm:py-20 text-gray-800 font-sans" data-aos="fade-up">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Main Icon, Title, and Divider */}
@@ -46,7 +46,7 @@ const ApproachSection = () => {
 
         {/* Subtitle/Overview Text */}
         <p 
-          className="max-w-4xl mx-auto text-xl leading-relaxed text-gray-600 mb-16"
+          className="max-w-4xl mx-auto text-xl leading-relaxed text-gray-600 mb:12 md:mb-16"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -61,7 +61,7 @@ const ApproachSection = () => {
               <div
                 key={index}
                 // Card styling: rounded, lifted shadow, accent border, and scale-up hover effect
-                className="bg-white rounded-3xl p-8 shadow-xl border-t-4 border-teal-500 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl cursor-pointer"
+                className="bg-white rounded-3xl p-4 md:p-8 shadow-xl border-t-4 border-teal-500 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl cursor-pointer"
                 data-aos="zoom-in"
                 data-aos-delay={item.aosDelay} // Staggered animation
               >
@@ -91,9 +91,9 @@ const ApproachSection = () => {
         <div className="mt-16" data-aos="fade-up" data-aos-delay="800">
             <button
                 // Button styling: large, rounded, shadowed, and animated on hover
-                className="inline-flex items-center justify-center px-10 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 transform hover:translate-y-[-3px] active:scale-95"
+                className="inline-flex items-center justify-center px-10 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-[#00A3E8] hover:bg-[#0090D0] focus:outline-none  transition duration-300 transform hover:translate-y-[-3px] active:scale-95"
             >
-                Start Your Savings Audit &rarr;
+                Start Your Savings
             </button>
         </div>
       </div>

@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative flex items-center justify-center text-center h-[90vh] overflow-hidden bg-[#003E6B]">
       {/* ===== Background Image Layer ===== */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="hidden md:flex absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80')",
@@ -23,21 +23,13 @@ const Hero = () => {
       ></div>
 
       {/* ===== Content ===== */}
-      <div className="relative z-10 container mx-auto px-6 flex flex-col items-center justify-center text-white">
-        {/* Icon */}
-        <div
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          className="flex items-center justify-center mb-6"
-        >
-          <FaBuilding className="text-7xl md:text-8xl text-[#00A3E8] drop-shadow-2xl animate-pulse" />
-        </div>
+      <div className="relative z-10 container mx-auto px-3 md:px-6 flex flex-col items-center justify-center text-white">
 
         {/* Main heading */}
         <h1
           data-aos="fade-up"
           data-aos-delay="200"
-          className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight"
+          className="text-5xl md:text-7xl font-extrabold mb-3 md:mb-6 leading-tight tracking-tight"
         >
           Mobilia Consulting
         </h1>
@@ -63,7 +55,7 @@ const Hero = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="800"
-          className="mt-10 relative z-20"
+          className="mt-10 md:mt-20 relative z-20"
         >
           <button className="px-8 py-3 bg-[#00A3E8] hover:bg-[#0090D0] transition-all duration-300 text-white font-semibold rounded-full shadow-md hover:shadow-2xl">
             Learn More

@@ -5,7 +5,7 @@ const StorySection = () => {
   return (
     <section
       // Modern, professional background with a subtle, clean gradient
-      className="relative bg-white py-18 text-gray-800 overflow-hidden"
+      className="relative bg-white py-10 md:py-18 text-gray-800 overflow-hidden"
       id="story"
     >
       {/* 🚀 Decorative Background Shapes (Subtle & Dynamic) 🚀 */}
@@ -14,7 +14,7 @@ const StorySection = () => {
       {/* Bottom Right Chevron/Wave Shape (for structure) */}
       <div className="absolute bottom-0 right-0 w-full h-1/4 bg-[#E0F7FA] opacity-50 clip-path-polygon-0-100-100-100-100-0-50-25 transition-all duration-1000"></div>
 
-      <div className="relative container mx-auto px-6 max-w-7xl">
+      <div className="relative container mx-auto px-3 md:px-6 max-w-7xl">
         <div className="lg:flex items-center gap-16">
           {/* ===== Text side (Primary focus on story) ===== */}
           <div className="lg:w-1/2 lg:order-2">
@@ -32,7 +32,7 @@ const StorySection = () => {
               data-aos="fade-right"
               data-aos-duration="800"
               data-aos-delay="100"
-              className="text-5xl md:text-6xl font-extrabold text-[#0A3D62] mb-8 leading-tight"
+              className="text-4xl md:text-6xl font-extrabold text-[#0A3D62] mb-8 leading-tight"
             >
               Driving <span className="text-[#007BFF]">Excellence</span>, Building Trust.
             </h2>
@@ -79,7 +79,7 @@ const StorySection = () => {
           >
             <div className="relative group">
               <img
-                src="https://images.unsplash.com/photo-1581091215367-59ab6b7a0a9e?auto=format&fit=crop&w=1200&q=80"
+                src="https://media.istockphoto.com/id/1492995618/photo/anxious-young-woman-sharing-her-struggles-with-her-peers-during-a-group-therapy-session.jpg?s=612x612&w=0&k=20&c=ZZ9OC8sAgPd0m-l9z8GYDboJ3m2u6JyTpluyVSoqpAQ="
                 alt="Professional team collaborating on strategy"
                 // Rounded corners and stronger shadow for premium feel
                 className="rounded-3xl xl:rounded-[40px] shadow-2xl w-full object-cover aspect-video md:aspect-square transform group-hover:scale-[1.02] transition-all duration-700 border-4 border-white"
@@ -89,7 +89,7 @@ const StorySection = () => {
                 <FaRocket className="text-[#007BFF] text-3xl" />
               </div>
               {/* Subtle bottom gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A3D62]/30 via-transparent rounded-3xl xl:rounded-[40px] opacity-100"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0A3D62]/30 via-transparent rounded-3xl xl:rounded-[40px] opacity-100"></div> */}
             </div>
           </div>
         </div>
