@@ -1,37 +1,100 @@
 import React from "react";
-import { FaChartLine } from "react-icons/fa";
+// Enhanced icon set for a professional visual look
+import { 
+  FaSearch,    // For Analyze/Audit
+  FaRocket,    // For Optimize/Strategy
+  FaRecycle    // For Sustain/Governance
+} from "react-icons/fa";
 
 const ApproachSection = () => {
+  // Define card data with professional titles, detailed descriptions, and icons
+  const approachSteps = [
+    { 
+      title: "Deep-Dive Analysis", 
+      desc: "A thorough, data-driven audit of current spending, technology stack, and vendor contracts to identify every saving opportunity.",
+      icon: FaSearch,
+      aosDelay: "200" // Staggered delay for card reveal
+    },
+    { 
+      title: "Strategic Optimization", 
+      desc: "Leveraging expert benchmarks to negotiate contracts, streamline processes, and implement best-practice solutions for immediate impact.", 
+      icon: FaRocket,
+      aosDelay: "400"
+    },
+    { 
+      title: "Sustainable Governance", 
+      desc: "Implementing continuous monitoring and governance models that ensure long-term, self-sustaining financial efficiency and predictability.", 
+      icon: FaRecycle,
+      aosDelay: "600"
+    },
+  ];
+
   return (
-    <section
-      className="bg-[#F7F9FC] py-20 text-[#333]"
-      data-aos="fade-up"
-    >
-      <div className="container mx-auto px-6 text-center">
-        <FaChartLine className="text-[#00A3E8] text-4xl mx-auto mb-4" />
-        <h2 className="text-3xl font-bold text-[#003E6B] mb-6">Our Approach</h2>
-        <p className="max-w-3xl mx-auto text-lg leading-relaxed mb-6">
-          We believe in transparency, speed and measurable outcomes. Our
-          methodology combines analytics-driven audits with human expertise —
-          ensuring savings that are sustainable and strategic.
+    // Outer section with light background and responsive padding
+    <section className="bg-gray-50 py-10 sm:py-20 text-gray-800 font-sans" data-aos="fade-up">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        {/* Main Icon, Title, and Divider */}
+        <div className="flex flex-col items-center mb-12">
+            {/* The main icon uses a vibrant accent color */}            
+            <h2 className="text-4xl font-extrabold text-blue-900 tracking-tight sm:text-5xl">
+                Our Proven Methodology
+            </h2>
+            {/* Professional accent divider */}
+            <div className="w-20 h-1 bg-teal-600 mt-3 rounded-full"></div>
+        </div>
+
+        {/* Subtitle/Overview Text */}
+        <p 
+          className="max-w-4xl mx-auto text-xl leading-relaxed text-gray-600 mb:12 md:mb-16"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          We blend human expertise with predictive analytics, ensuring our methodology delivers **transparent, rapid, and measurable outcomes** that redefine your financial efficiency.
         </p>
-        <div className="grid md:grid-cols-3 gap-6 mt-10">
-          {[
-            { title: "Analyze", desc: "Detailed audit of spend & vendor contracts." },
-            { title: "Optimize", desc: "Negotiate, benchmark, and improve processes." },
-            { title: "Sustain", desc: "Continuous monitoring for long-term success." },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-shadow"
-              data-aos="zoom-in"
+
+        {/* Approach Cards Grid - Fully Responsive */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-10">
+          {approachSteps.map((item, index) => {
+            const IconComponent = item.icon; // Dynamic Icon assignment
+            return (
+              <div
+                key={index}
+                // Card styling: rounded, lifted shadow, accent border, and scale-up hover effect
+                className="bg-white rounded-3xl p-4 md:p-8 shadow-xl border-t-4 border-teal-500 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl cursor-pointer"
+                data-aos="zoom-in"
+                data-aos-delay={item.aosDelay} // Staggered animation
+              >
+                
+                {/* Card Icon Container */}
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-teal-500 rounded-full inline-block shadow-lg">
+                    <IconComponent className="text-3xl text-white" />
+                  </div>
+                </div>
+
+                {/* Card Title */}
+                <h3 className="text-2xl font-bold text-blue-800 mb-3">
+                  {item.title}
+                </h3>
+                
+                {/* Card Description */}
+                <p className="text-base text-gray-700 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        
+        {/* Call to Action Button */}
+        <div className="mt-16" data-aos="fade-up" data-aos-delay="800">
+            <button
+                // Button styling: large, rounded, shadowed, and animated on hover
+                className="inline-flex items-center justify-center px-10 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-[#00A3E8] hover:bg-[#0090D0] focus:outline-none  transition duration-300 transform hover:translate-y-[-3px] active:scale-95"
             >
-              <h3 className="text-xl font-semibold text-[#003E6B] mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-700">{item.desc}</p>
-            </div>
-          ))}
+                Start Your Savings
+            </button>
         </div>
       </div>
     </section>
