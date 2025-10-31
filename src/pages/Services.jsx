@@ -1,11 +1,15 @@
 import React from 'react'
-import Hero from '../component/services/Hero'
+import HeroSection from '../component/services/HeroSection'
+import ServicesList from '../component/services/ServicesList'
+import CTASection from '../component/about/CTASection'
 
 const Services = () => {
   return (
     <div>
-        <Hero/>
-        </div>
+      <HeroSection/>
+      <ServicesList/>
+      <CTASection/>
+    </div>
   )
 }
 
