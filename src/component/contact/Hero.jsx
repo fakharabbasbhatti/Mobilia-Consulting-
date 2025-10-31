@@ -1,11 +1,68 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
-  return (
-    <div>
-      <h3>contact</h3>
-    </div>
-  )
-}
+  const fadeIn = (delay = 0) => ({
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, delay },
+    },
+  });
 
-export default Hero
+  return (
+    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 bg-linear-to-b from-[#468DE0] via-[#468DE1] to-[#2b6cb0] overflow-hidden">
+      
+      {/* 🌟 Floating Glow */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.25 }}
+        transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute w-[500px] h-[500px] bg-[#ffffff33] rounded-full blur-[180px] top-10 left-10"
+      />
+
+      {/* 🔹 Hero Heading */}
+      <motion.h1
+        variants={fadeIn(0.1)}
+        initial="hidden"
+        animate="visible"
+        className="text-5xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-md"
+      >
+        Let’s <span className="text-[#ffde59]">Connect</span> & Build
+        <br className="hidden sm:block" />
+        Something <span className="text-[#ffffff]">Extraordinary</span>
+      </motion.h1>
+
+      {/* 🔹 Subtitle */}
+      <motion.p
+        variants={fadeIn(0.3)}
+        initial="hidden"
+        animate="visible"
+        className="text-gray-100 mt-5 max-w-2xl text-lg leading-relaxed"
+      >
+        I’m always open to discussing new projects, creative ideas, or
+        opportunities to be part of your vision. Let’s make your ideas a
+        reality together!
+      </motion.p>
+
+      {/* 🔹 Call to Action */}
+      <motion.div
+        variants={fadeIn(0.5)}
+        initial="hidden"
+        animate="visible"
+        className="mt-8"
+      >
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-linear-to-r from-[#ffde59] to-[#facc15] text-[#1a202c] font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-[0_0_25px_rgba(255,222,89,0.5)] transition-all duration-300"
+        >
+          Contact Me <ArrowRight size={20} />
+        </a>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Hero;
