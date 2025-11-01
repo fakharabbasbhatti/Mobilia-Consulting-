@@ -85,7 +85,7 @@ const ValuesSection = () => {
           data-aos-delay="800"
           className="mt-10 md:mt-16 flex justify-center"
         >
-          <button className="px-8 py-3 bg-[#00A3E8] text-white font-semibold rounded-full shadow-lg hover:bg-[#0090D0] hover:shadow-2xl transition-all duration-300">
+          <button className="px-8 py-3 bg-[#00BFA6] text-white font-semibold rounded-full shadow-lg hover:bg-[#002B5B] hover:shadow-2xl transition-all duration-300">
             Learn More
           </button>
         </div>

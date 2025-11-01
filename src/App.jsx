@@ -16,6 +16,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Login from "./component/comman/Login";
+import SignUp from "./component/comman/SignUp";
 
 // ✅ Layout component (Navbar + Footer always visible)
 const Layout = () => {
@@ -40,6 +42,8 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "services", element: <Services /> },
       { path: "contact", element: <Contact /> },
+      { path: "login", element: <Login/> },
+      { path: "signup", element: <SignUp/> },
     ],
   },
 ]);
