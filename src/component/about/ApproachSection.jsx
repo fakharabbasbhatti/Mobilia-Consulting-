@@ -50,7 +50,7 @@ const ApproachSection = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Wes blend human expertise with predictive analytics, ensuring our methodology delivers **transparent, rapid, and measurable outcomes** that redefine your financial efficiency.
+          We blend human expertise with predictive analytics, ensuring our methodology delivers **transparent, rapid, and measurable outcomes** that redefine your financial efficiency.
         </p>
 
         {/* Approach Cards Grid - Fully Responsive */}
