@@ -13,8 +13,7 @@ const Signup = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-linear-to-b from-[#2250b4] via-[#1e4dba] to-[#468DE0] px-6 py-16 overflow-hidden">
-
+    <section className="relative min-h-screen flex items-center justify-center bg-[#00BFA6] px-6 py-16 overflow-hidden">
       {/* 🔹 Background Blur Shapes */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#468DE0]/20 blur-[160px] rounded-full "></div>
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#61A5F9]/20 blur-[140px] rounded-full "></div>
@@ -43,9 +42,7 @@ const Signup = () => {
         {/* Form */}
         <form className="flex flex-col gap-5">
           <div data-aos="fade-right" data-aos-delay="100">
-            <label className="block text-white mb-1 text-sm">
-              Full Name
-            </label>
+            <label className="block text-white mb-1 text-sm">Full Name</label>
             <input
               type="text"
               placeholder="John Doe"
@@ -67,9 +64,7 @@ const Signup = () => {
           </div>
 
           <div data-aos="fade-left" data-aos-delay="300">
-            <label className="block text-white mb-1 text-sm">
-              Password
-            </label>
+            <label className="block text-white mb-1 text-sm">Password</label>
             <input
               type="password"
               placeholder="••••••••"
@@ -108,12 +103,12 @@ const Signup = () => {
           className="flex items-center gap-2 mt-6"
         >
           <div className="flex-1 h-px bg-white/20"></div>
-          <span className="text-gray-400 text-sm">or</span>
+          {/* <span className="text-gray-400 text-sm">or</span> */}
           <div className="flex-1 h-px bg-white/20"></div>
         </div>
 
         {/* Social Signup */}
-        <div
+        {/* <div
           data-aos="fade-up"
           data-aos-delay="700"
           className="flex justify-center gap-4 mt-6"
@@ -132,7 +127,7 @@ const Signup = () => {
               className="w-5 h-5"
             />
           </button>
-        </div>
+        </div> */}
 
         {/* Login Redirect */}
         <p

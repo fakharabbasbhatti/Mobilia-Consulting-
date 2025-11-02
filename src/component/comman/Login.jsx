@@ -13,7 +13,7 @@ const Login = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-linear-to-b from-[#1a429a] via-[#315fa0] to-[#468DE0] px-6 py-25">
+    <section className="min-h-screen flex items-center justify-center bg-[#00BFA6] px-6 py-25">
       {/* 🔹 Login Card */}
     <div
   data-aos="zoom-in"
@@ -94,12 +94,12 @@ const Login = () => {
           className="flex items-center gap-2 mt-6"
         >
           <div className="flex-1 h-px bg-white/20"></div>
-          <span className="text-gray-400 text-sm">or</span>
+          {/* <span className="text-gray-400 text-sm">or</span> */}
           <div className="flex-1 h-px bg-white/20"></div>
         </div>
 
         {/* Social Buttons */}
-        <div
+        {/* <div
           data-aos="fade-up"
           data-aos-delay="700"
           className="flex justify-center gap-4 mt-6"
@@ -118,7 +118,7 @@ const Login = () => {
               className="w-5 h-5"
             />
           </button>
-        </div>
+        </div> */}
 
         {/* Signup Link */}
         <p
