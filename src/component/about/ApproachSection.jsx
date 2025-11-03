@@ -50,7 +50,7 @@ const ApproachSection = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          We blend human expertise with predictive analytics, ensuring our methodology delivers **transparent, rapid, and measurable outcomes** that redefine your financial efficiency.
+          Wessss blend human expertise with predictive analytics, ensuring our methodology delivers **transparent, rapid, and measurable outcomes** that redefine your financial efficiency.
         </p>
 
         {/* Approach Cards Grid - Fully Responsive */}
@@ -93,7 +93,7 @@ const ApproachSection = () => {
                 // Button styling: large, rounded, shadowed, and animated on hover
                 className="inline-flex items-center justify-center px-5 py-2 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-[#00BFA6] hover:bg-[#002B5B] focus:outline-none  transition duration-300 transform hover:translate-y-[-3px] active:scale-95"
             >
-                Starts Your Saving
+                Start Your Saving
             </button>
         </div>
       </div>
