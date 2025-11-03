@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { UserPlus } from "lucide-react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Signup = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -14,7 +18,7 @@ const Signup = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[#00BFA6] px-6 py-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-[#00BFA6] px-3  md:px-6 py-16 overflow-hidden">
       {/* 🔹 Background Blur Shapes */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#468DE0]/20 blur-[160px] rounded-full "></div>
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#61A5F9]/20 blur-[140px] rounded-full "></div>
@@ -22,7 +26,7 @@ const Signup = () => {
       {/* 🔹 Sign Up Card */}
       <div
         data-aos="zoom-in"
-        className="w-full max-w-lg bg-[#0E1F45]/70 border border-[#ffffff2b] backdrop-blur-sm rounded-3xl shadow-md p-8 md:p-10 mt-10"
+        className="w-full max-w-lg bg-[#0E1F45]/70 border border-[#ffffff2b] backdrop-blur-sm rounded-3xl shadow-md p-4 md:p-10 mt-10"
       >
         {/* Header */}
         <div
@@ -64,26 +68,42 @@ const Signup = () => {
             />
           </div>
 
-          <div data-aos="fade-left" data-aos-delay="300">
+          {/* Password with Eye Icon */}
+          <div data-aos="fade-left" data-aos-delay="300" className="relative">
             <label className="block text-white mb-1 text-sm">Password</label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="••••••••"
-              className="w-full p-3 bg-[#122a5c]/40 border border-[#ffffff33] text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#61A5F9] transition-all duration-300"
+              className="w-full p-3 pr-10 bg-[#122a5c]/40 border border-[#ffffff33] text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#61A5F9] transition-all duration-300"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-10 text-gray-400 hover:text-white transition-colors"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
           </div>
 
-          <div data-aos="fade-left" data-aos-delay="400">
+          {/* Confirm Password with Eye Icon */}
+          <div data-aos="fade-left" data-aos-delay="400" className="relative">
             <label className="block text-white mb-1 text-sm">
               Confirm Password
             </label>
             <input
-              type="password"
+              type={showConfirmPassword ? "text" : "password"}
               placeholder="Re-enter password"
-              className="w-full p-3 bg-[#122a5c]/40 border border-[#ffffff33] text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#61A5F9] transition-all duration-300"
+              className="w-full p-3 pr-10 bg-[#122a5c]/40 border border-[#ffffff33] text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#61A5F9] transition-all duration-300"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              className="absolute right-3 top-10 text-gray-400 hover:text-white transition-colors"
+            >
+              {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
           </div>
 
           {/* Signup Button */}
@@ -104,31 +124,8 @@ const Signup = () => {
           className="flex items-center gap-2 mt-6"
         >
           <div className="flex-1 h-px bg-white/20"></div>
-          {/* <span className="text-gray-400 text-sm">or</span> */}
           <div className="flex-1 h-px bg-white/20"></div>
         </div>
-
-        {/* Social Signup */}
-        {/* <div
-          data-aos="fade-up"
-          data-aos-delay="700"
-          className="flex justify-center gap-4 mt-6"
-        >
-          <button className="w-11 h-11 flex items-center justify-center bg-white rounded-full hover:scale-110 transition-transform duration-300">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
-              alt="Google"
-              className="w-5 h-5"
-            />
-          </button>
-          <button className="w-11 h-11 flex items-center justify-center bg-[#1877F2] rounded-full hover:scale-110 transition-transform duration-300">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-              alt="Facebook"
-              className="w-5 h-5"
-            />
-          </button>
-        </div> */}
 
         {/* Login Redirect */}
         <p
@@ -137,7 +134,8 @@ const Signup = () => {
           className="text-gray-400 text-center text-sm mt-6"
         >
           Already have an account?{" "}
-          <Link to="/login"
+          <Link
+            to="/login"
             className="text-[#ffde59] font-semibold hover:text-white hover:underline transition-all"
           >
             Login

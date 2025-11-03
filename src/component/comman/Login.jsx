@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { UserRound } from "lucide-react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -14,17 +17,16 @@ const Login = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#00BFA6] px-6 py-25">
+    <section className="min-h-screen flex items-center justify-center bg-[#00BFA6] px-3 md:px-6 py-25">
       {/* 🔹 Login Card */}
-    <div
-  data-aos="zoom-in"
-  className="w-full max-w-lg bg-[#0E1F45]/70 border border-[#ffffff2b] backdrop-blur-sm rounded-2xl shadow-md p-6 md:p-8 py-8 md:py-10 pt-30"
->
-
+      <div
+        data-aos="zoom-in"
+        className="w-full max-w-lg bg-[#0E1F45]/70 border border-[#ffffff2b] backdrop-blur-sm rounded-2xl shadow-md p-4 md:p-8 py-8 md:py-10 pt-15 md:pt-15"
+      >
         {/* Header Icon */}
         <div
           data-aos="fade-down"
-          className="flex flex-col items-center justify-center mb-6"
+          className="flex flex-col items-center justify-center mb-6 md:mb-12"
         >
           <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#468DE0]">
             <UserRound size={40} className="text-white" />
@@ -51,16 +53,24 @@ const Login = () => {
             />
           </div>
 
-          <div data-aos="fade-left" data-aos-delay="300">
+          {/* Password Input with Eye Icon */}
+          <div data-aos="fade-left" data-aos-delay="300" className="relative">
             <label className="block text-white mb-1 text-sm">
               Password
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="••••••••"
-              className="w-full p-3 bg-[#122a5c]/40 border border-[#ffffff33] text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#61A5F9] transition-all duration-300"
+              className="w-full p-3 pr-10 bg-[#122a5c]/40 border border-[#ffffff33] text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#61A5F9] transition-all duration-300"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-10 text-gray-400 hover:text-white transition-colors"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
           </div>
 
           {/* Forgot Password */}
@@ -95,31 +105,8 @@ const Login = () => {
           className="flex items-center gap-2 mt-6"
         >
           <div className="flex-1 h-px bg-white/20"></div>
-          {/* <span className="text-gray-400 text-sm">or</span> */}
           <div className="flex-1 h-px bg-white/20"></div>
         </div>
-
-        {/* Social Buttons */}
-        {/* <div
-          data-aos="fade-up"
-          data-aos-delay="700"
-          className="flex justify-center gap-4 mt-6"
-        >
-          <button className="w-11 h-11 flex items-center justify-center bg-white rounded-full hover:scale-105 transition-transform duration-300">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
-              alt="Google"
-              className="w-5 h-5"
-            />
-          </button>
-          <button className="w-11 h-11 flex items-center justify-center bg-[#1877F2] rounded-full hover:scale-105 transition-transform duration-300">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-              alt="Facebook"
-              className="w-5 h-5"
-            />
-          </button>
-        </div> */}
 
         {/* Signup Link */}
         <p
@@ -128,8 +115,9 @@ const Login = () => {
           className="text-gray-400 text-center text-sm mt-6"
         >
           Don’t have an account?{" "}
-          <Link to="/signup"
-           className="text-[#ffde59] font-semibold hover:text-white hover:underline transition-all"
+          <Link
+            to="/signup"
+            className="text-[#ffde59] font-semibold hover:text-white hover:underline transition-all"
           >
             Sign Up
           </Link>
