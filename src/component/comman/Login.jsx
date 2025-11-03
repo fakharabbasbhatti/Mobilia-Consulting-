@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { UserRound } from "lucide-react";
@@ -127,12 +128,11 @@ const Login = () => {
           className="text-gray-400 text-center text-sm mt-6"
         >
           Don’t have an account?{" "}
-          <a
-            href="#"
-            className="text-[#ffde59] font-semibold hover:text-white transition-all"
+          <Link to="/signup"
+           className="text-[#ffde59] font-semibold hover:text-white hover:underline transition-all"
           >
             Sign Up
-          </a>
+          </Link>
         </p>
       </div>
     </section>

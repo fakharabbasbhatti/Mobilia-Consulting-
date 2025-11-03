@@ -1,7 +1,16 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import logo from "../../assets/Images/logomob.png";
 
 const Footer = () => {
@@ -15,21 +24,21 @@ const Footer = () => {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
-    { name: "Privacy Policy", href: "/privacy" }
+    { name: "Privacy Policy", href: "/privacy" },
   ];
 
   const services = [
     { name: "Web Development", href: "/services/web" },
     { name: "Mobile Apps", href: "/services/mobile" },
     { name: "UI/UX Design", href: "/services/design" },
-    { name: "Digital Marketing", href: "/services/marketing" }
+    { name: "Digital Marketing", href: "/services/marketing" },
   ];
 
   const socialLinks = [
     { icon: FaFacebook, href: "https://facebook.com/mobilla", label: "Facebook" },
     { icon: FaInstagram, href: "https://instagram.com/mobilla", label: "Instagram" },
     { icon: FaTwitter, href: "https://twitter.com/mobilla", label: "Twitter" },
-    { icon: FaLinkedin, href: "https://linkedin.com/company/mobilla", label: "LinkedIn" }
+    { icon: FaLinkedin, href: "https://linkedin.com/company/mobilla", label: "LinkedIn" },
   ];
 
   return (
@@ -46,7 +55,7 @@ const Footer = () => {
           <img src={logo} alt="Mobilla Logo" className="h-12 w-auto" />
           <p className="text-white/90 text-sm leading-relaxed">
             At <span className="font-semibold text-white">Mobilla</span>, we bring ideas
-            to life through innovative web and app solutions. Our mission is to 
+            to life through innovative web and app solutions. Our mission is to
             empower businesses with elegant digital products that drive growth.
           </p>
           <div className="flex items-center space-x-2 text-white/80 text-sm">
@@ -63,7 +72,7 @@ const Footer = () => {
           <ul className="space-y-3">
             {companyLinks.map((link, index) => (
               <li key={index}>
-                <a 
+                <a
                   href={link.href}
                   className="text-white/80 hover:text-white transition-all duration-300 text-sm flex items-center group"
                 >
@@ -83,7 +92,7 @@ const Footer = () => {
           <ul className="space-y-3">
             {services.map((service, index) => (
               <li key={index}>
-                <a 
+                <a
                   href={service.href}
                   className="text-white/80 hover:text-white transition-all duration-300 text-sm flex items-center group"
                 >
@@ -101,8 +110,8 @@ const Footer = () => {
             Contact
           </h2>
           <div className="space-y-4">
-            <a 
-              href="mailto:support@mobilla.com" 
+            <a
+              href="mailto:support@mobilla.com"
               className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-300 group"
             >
               <div className="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition-colors">
@@ -110,9 +119,9 @@ const Footer = () => {
               </div>
               <span className="text-sm">support@mobilla.com</span>
             </a>
-            
-            <a 
-              href="tel:+923001234567" 
+
+            <a
+              href="tel:+923001234567"
               className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-300 group"
             >
               <div className="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition-colors">
@@ -120,12 +129,12 @@ const Footer = () => {
               </div>
               <span className="text-sm">+1 300 1234567</span>
             </a>
-            
+
             <div className="flex items-start space-x-3 text-white/80">
               <div className="p-2 bg-white/10 rounded-lg mt-1">
                 <FaMapMarkerAlt className="text-sm" />
               </div>
-              <span className="text-sm leading-relaxed">USA </span>
+              <span className="text-sm leading-relaxed">USA</span>
             </div>
           </div>
         </div>
@@ -134,18 +143,24 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="relative border-t border-white/20 pt-8 pb-6">
         <div className="max-w-7xl mx-auto px-6">
-          <div 
-            className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
-            <div className="text-white/70 text-sm text-center md:text-left">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-white/70 text-sm text-center md:text-left"
+            >
               © {currentYear} <span className="font-semibold text-white">Mobilla</span>. All Rights Reserved.
-            </div>
+            </motion.div>
 
             {/* Social Media Icons */}
-            <div className="flex space-x-4">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="flex space-x-4"
+            >
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -158,10 +173,15 @@ const Footer = () => {
                   <social.icon className="text-lg text-white group-hover:text-white/90" />
                 </a>
               ))}
-            </div>
+            </motion.div>
 
             {/* Additional Links */}
-            <div className="flex space-x-6 text-white/70 text-sm">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              className="flex space-x-6 text-white/70 text-sm"
+            >
               <a href="/terms" className="hover:text-white transition-colors duration-300">
                 Terms
               </a>
@@ -171,7 +191,7 @@ const Footer = () => {
               <a href="/cookies" className="hover:text-white transition-colors duration-300">
                 Cookies
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
