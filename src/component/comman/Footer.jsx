@@ -67,7 +67,7 @@ const Footer = () => {
         {/* Company Links */}
         <div data-aos="fade-up" data-aos-delay="150">
           <h2 className="text-lg font-semibold mb-6 uppercase tracking-wider text-white border-b border-white/20 pb-2">
-            Company
+            quick links
           </h2>
           <ul className="space-y-3">
             {companyLinks.map((link, index) => (
