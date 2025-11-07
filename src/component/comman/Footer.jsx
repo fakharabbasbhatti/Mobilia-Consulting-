@@ -23,15 +23,15 @@ const Footer = () => {
   const companyLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/careers" },
-    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const services = [
-    { name: "Web Development", href: "/services/web" },
-    { name: "Mobile Apps", href: "/services/mobile" },
-    { name: "UI/UX Design", href: "/services/design" },
-    { name: "Digital Marketing", href: "/services/marketing" },
+    { name: "Wireless & Mobility", href: "/services" },
+    { name: "Bank & Merchant Fees", href: "/services" },
+    { name: "Municipal Trash & Recycling", href: "/services" },
+    { name: "Software & Licensing", href: "/services" },
   ];
 
   const socialLinks = [
